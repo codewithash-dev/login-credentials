@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Vault Demo - Expo Snack</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 32px;
+        }
+        .description {
+            color: #64748b;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .snack-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            display: block;
+        }
+        .links {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        a {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background: #2563eb;
+        }
+        .info {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            border-radius: 8px;
+            color: #1e40af;
+        }
+        .info strong {
+            display: block;
+            margin-bottom: 12px;
+        }
+        .info ul {
+            margin-left: 20px;
+        }
+        .info li {
+            margin-bottom: 8px;
+        }
+        .setup-info {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 16px;
+            border-radius: 8px;
+            color: #92400e;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Login Vault - Live Demo</h1>
+        <p class="description">
+            Interactive demo of the Login Vault credential manager. Try signing up, signing in, and viewing your saved credentials.
+        </p>
+        
+        <div class="setup-info">
+            <strong>📱 How to Use:</strong>
+            <p>Sign up with any email/password, then you'll be taken to the dashboard where you can see sample credentials. This is a UI demo - no data is actually saved.</p>
+        </div>
+        
+        <div class="snack-container" id="snack-loader">
+            <div style="padding: 40px; text-align: center; color: #64748b;">
+                <p style="margin-bottom: 10px;">Loading interactive demo...</p>
+                <p style="font-size: 14px;">If the demo doesn't load, use the links below.</p>
+            </div>
+        </div>
+        
+        <div class="links">
+            <a href="https://snack.expo.dev/@ashleyhenderson/login-vault-demo?platform=web" target="_blank">
+                📱 Open in Full Screen
+            </a>
+            <a href="https://www.codewithash.com/projects/login-credentials" target="_blank">
+                🌐 Full Website Version
+            </a>
+        </div>
+        
+        <div class="info">
+            <strong>✨ Demo Features:</strong>
+            <ul>
+                <li>✅ <strong>Sign In Screen</strong> - Email & password login interface</li>
+                <li>✅ <strong>Sign Up Screen</strong> - Create a new account with full name</li>
+                <li>✅ <strong>Credential Dashboard</strong> - View 3 sample saved credentials</li>
+                <li>✅ <strong>Password Toggle</strong> - Show/hide password functionality</li>
+                <li>✅ <strong>Responsive Design</strong> - Works on mobile & desktop</li>
+                <li>ℹ️ <strong>Demo Mode</strong> - No data persistence (for security)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Load the Snack iframe after page loads
+        window.addEventListener('load', function() {
+            const container = document.getElementById('snack-loader');
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://snack.expo.dev/embedded/@ashleyhenderson/login-vault-demo?platform=web';
+            iframe.style.width = '100%';
+            iframe.style.height = '700px';
+            iframe.style.border = 'none';
+            iframe.style.borderRadius = '12px';
+            container.innerHTML = '';
+            container.appendChild(iframe);
+        });
+    </script>
+</body>
+</html>
